@@ -1,5 +1,7 @@
-from pathlib import Path
-import os
+from pathlib import Path 
+import os 
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -60,9 +62,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # Добавьте import
-import os
 
-...
 
 # Этими строчками замените текущую настройку DATABASES
 DATABASES = {
@@ -78,7 +78,6 @@ DATABASES = {
     }
 }
 
-...
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
