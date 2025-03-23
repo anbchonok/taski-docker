@@ -59,16 +59,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# Добавьте import
+# Р”РѕР±Р°РІСЊС‚Рµ import
 import os
 
 ...
 
-# Этими строчками замените текущую настройку DATABASES
+# Р­С‚РёРјРё СЃС‚СЂРѕС‡РєР°РјРё Р·Р°РјРµРЅРёС‚Рµ С‚РµРєСѓС‰СѓСЋ РЅР°СЃС‚СЂРѕР№РєСѓ DATABASES
 DATABASES = {
     'default': {
-        # Меняем настройку Django: теперь для работы будет использоваться
-        # бэкенд postgresql
+        # РњРµРЅСЏРµРј РЅР°СЃС‚СЂРѕР№РєСѓ Django: С‚РµРїРµСЂСЊ РґР»СЏ СЂР°Р±РѕС‚С‹ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ
+        # Р±СЌРєРµРЅРґ postgresql
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', 'django'),
         'USER': os.getenv('POSTGRES_USER', 'django'),
@@ -115,14 +115,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-# При планировании архитектуры было решено,
-# что статические файлы Django должны быть доступны по адресу /static/
+# РџСЂРё РїР»Р°РЅРёСЂРѕРІР°РЅРёРё Р°СЂС…РёС‚РµРєС‚СѓСЂС‹ Р±С‹Р»Рѕ СЂРµС€РµРЅРѕ,
+# С‡С‚Рѕ СЃС‚Р°С‚РёС‡РµСЃРєРёРµ С„Р°Р№Р»С‹ Django РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РґРѕСЃС‚СѓРїРЅС‹ РїРѕ Р°РґСЂРµСЃСѓ /static/
 STATIC_URL = '/static/'
-# Указываем корневую директорию для сборки статических файлов;
-# в контейнере это будет /app/collected_static
+# РЈРєР°Р·С‹РІР°РµРј РєРѕСЂРЅРµРІСѓСЋ РґРёСЂРµРєС‚РѕСЂРёСЋ РґР»СЏ СЃР±РѕСЂРєРё СЃС‚Р°С‚РёС‡РµСЃРєРёС… С„Р°Р№Р»РѕРІ;
+# РІ РєРѕРЅС‚РµР№РЅРµСЂРµ СЌС‚Рѕ Р±СѓРґРµС‚ /app/collected_static
 STATIC_ROOT = BASE_DIR / 'collected_static'
-# Теперь при вызове команды python manage.py collectstatic
-# Django будет копировать все статические файлы в директорию collected_static
+# РўРµРїРµСЂСЊ РїСЂРё РІС‹Р·РѕРІРµ РєРѕРјР°РЅРґС‹ python manage.py collectstatic
+# Django Р±СѓРґРµС‚ РєРѕРїРёСЂРѕРІР°С‚СЊ РІСЃРµ СЃС‚Р°С‚РёС‡РµСЃРєРёРµ С„Р°Р№Р»С‹ РІ РґРёСЂРµРєС‚РѕСЂРёСЋ collected_static
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
